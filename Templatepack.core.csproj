@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageType>Template</PackageType>
+        <PackageVersion>0.0.1</PackageVersion>
+        <PackageId>marcowillemms.templatepack</PackageId>
+        <Title>Template pack for creating several projects</Title>
+        <Authors>Marco Willems</Authors>
+        <Description>The template pack contains several templates regarding personal projects</Description>
+        <PackageTags>dotnet-new;templates</PackageTags>
+
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <ContentTargetFolders>content</ContentTargetFolders>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
+        <Compile Remove="**\*" />
+    </ItemGroup>
+</Project>
