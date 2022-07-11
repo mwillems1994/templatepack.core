@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  marcowillems.template.webapi:
+    image: ${DOCKER_REGISTRY-}marcowillemstemplatewebapi
+    build:
+      context: .
+      dockerfile: MarcoWillems.Template.WebApi/Dockerfile
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "4321:5432"

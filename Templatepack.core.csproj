@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageType>Template</PackageType>
         <PackageVersion>0.0.1</PackageVersion>
@@ -18,5 +18,10 @@
     <ItemGroup>
         <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
         <Compile Remove="**\*" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="templates\MarcoWillems.Template.WebApi\MarcoWillems.Template.WebApi.Database\" />
+      <Folder Include="templates\MarcoWillems.Template.WebApi\MarcoWillems.Template.WebApi.Services\" />
     </ItemGroup>
 </Project>
