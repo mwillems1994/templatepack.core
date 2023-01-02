@@ -1,4 +1,6 @@
 .idea/.idea.Templatepack.core.dir/.idea
 .idea
+.vs
+bin
 obj
 .DS_Store

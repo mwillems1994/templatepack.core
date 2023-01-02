@@ -1,0 +1,48 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "marco",
+  "classifications": [],
+  "description": "",
+  "name": "MarcoWillems.Template.MinimalMicroservice",
+  "defaultName": "MarcoWillems.Template.MinimalMicroservice",
+  "identity": "MyTemplate.MarcoWillems.Template.MinimalMicroservice.CSharp",
+  "groupIdentity": "MyTemplate.MarcoWillems.Template.MinimalMicroservice",
+  "tags": {
+    "language": "C#",
+    "type": "project",
+    "vsmac-category": "other/net/general"
+  },
+  "shortName": "mwMinimalMS",
+  "sourceName": "MarcoWillems.Template.MinimalMicroservice",
+  "guids": [
+    "{5C377E2D-9346-46A1-AE8A-B4784D75D1F6}",
+    "{F6BDC9CD-C54B-4DDF-9A86-9E24D4907144}",
+    "{D9BBB162-C6E8-45D9-A048-8650836D7F2F}",
+    "{863113A5-0DF9-4303-B5C7-8439470856EA}"
+  ],
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            ".vs/.idea/**/*"
+          ]
+        }
+      ]
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "path": "MarcoWillems.Template.MinimalMicroservice/MarcoWillems.Template.MinimalMicroservice.csproj"
+    },
+    {
+      "path": "MarcoWillems.Template.MinimalMicroservice.Contracts/MarcoWillems.Template.MinimalMicroservice.Contracts.csproj"
+    },
+    {
+      "path": "MarcoWillems.Template.MinimalMicroservice.Database/MarcoWillems.Template.MinimalMicroservice.Database.csproj"
+    },
+    {
+      "path": "MarcoWillems.Template.MinimalMicroservice.Services/MarcoWillems.Template.MinimalMicroservice.Services.csproj"
+    }
+  ]
+}

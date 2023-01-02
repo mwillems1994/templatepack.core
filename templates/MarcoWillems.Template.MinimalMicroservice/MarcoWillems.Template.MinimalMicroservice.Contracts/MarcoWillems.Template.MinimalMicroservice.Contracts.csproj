@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore.Relational" />
+    <None Remove="Models\Entity\" />
+    <None Remove="Services\" />
+    <None Remove="Entities\" />
+    <None Remove="Entities\Common\" />
+    <None Remove="Events\" />
+    <None Remove="Caching\" />
+    <None Remove="Options\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Entity\" />
+    <Folder Include="Services\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Entities\Common\" />
+    <Folder Include="Events\" />
+    <Folder Include="Caching\" />
+    <Folder Include="Options\" />
+  </ItemGroup>
+</Project>
