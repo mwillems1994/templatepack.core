@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore.Query;
 
 namespace MarcoWillems.Template.MinimalMicroservice.Services.Repositories;
 
-public abstract class BaseRepository<T> : IBaseRepository<T> where T : class
+public abstract class BaseRepository<T> : IBaseRepository<T> where T : EntityBase
 {
-    internal readonly CustomDbContext _context;
-    internal readonly DbSet<T> _dbSet;
+    private readonly CustomDbContext _context;
+    private readonly DbSet<T> _dbSet;
 
     public BaseRepository(CustomDbContext dbContext)
     {
@@ -40,6 +40,16 @@ public abstract class BaseRepository<T> : IBaseRepository<T> where T : class
             .Where(filter ?? NoFilter)
             .Select(selector)
             .ToArrayAsync(cancellationToken);
+
+        return result;
+    }
+
+    public async Task<TResult?> FindAsync<TResult>(Guid id, Expression<Func<T, TResult>> selector, CancellationToken cancellationToken = default)
+    {
+        var result = await _dbSet
+            .Where(x => x.Id == id)
+            .Select(selector)
+            .FirstOrDefaultAsync(cancellationToken);
 
         return result;
     }
